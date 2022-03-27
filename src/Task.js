@@ -43,7 +43,9 @@ const Task = ({ id, name, isComplete, icon, onComplete, onUndo, onRemove }) => {
               backgroundColor: icon === "RUN" ? "#4CAF50" : "#2196F3",
               borderColor: "transparent"
             }}
-            icon={<FontAwesomeIcon icon={icon === "RUN" ? faBook : faBook} />}
+            icon={
+              <FontAwesomeIcon icon={icon === "RUN" ? faRunning : faBook} />
+            }
           />
         </div>
         <div className="rainbow-p-left_medium">
