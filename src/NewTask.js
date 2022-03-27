@@ -12,6 +12,8 @@ import {
   faRunning,
   faSpinner,
   faBook,
+  faLaptop,
+  faMicrochip,
   faEllipsisV
 } from "@fortawesome/free-solid-svg-icons";
 import { suggestIcon } from "./suggestions/model";
@@ -86,7 +88,7 @@ const NewTask = ({ onSaveTask, model, encoder }) => {
       setErrors([...errors, "NAME"]);
       return;
     }
-    if (task.icon === null) {
+    if (task?.icon === null) {
       setErrors([...errors, "ICON"]);
       return;
     }
@@ -163,7 +165,7 @@ const NewTask = ({ onSaveTask, model, encoder }) => {
               icon={
                 suggestedIcon ? (
                   <FontAwesomeIcon
-                    icon={suggestedIcon === "RUN" ? faRunning : faBook}
+                    icon={suggestedIcon === "RUN" ? faLaptop : faMicrochip}
                   />
                 ) : (
                   <FontAwesomeIcon icon={faSpinner} spin />
