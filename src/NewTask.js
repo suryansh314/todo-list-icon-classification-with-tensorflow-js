@@ -30,7 +30,7 @@ const NewTask = ({ onSaveTask, model, encoder }) => {
 
   const [typeTimeout, setTypeTimeout] = useState(null);
 
-  const handleNameChange = async e => {
+  const handleNameChange = async (e) => {
     const taskName = e.target.value;
 
     setTask({
@@ -82,7 +82,7 @@ const NewTask = ({ onSaveTask, model, encoder }) => {
   };
 
   const handleSaveTask = () => {
-    if (task.name.length < 2) {
+    if (task?.name?.length < 2) {
       setErrors([...errors, "NAME"]);
       return;
     }

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRunning, faBook, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Task = ({ id, name, isComplete, icon, onComplete, onUndo, onRemove }) => {
-  const handleClick = e => {
+  const handleClick = (e) => {
     if (isComplete) {
       onUndo(id);
     } else {
@@ -43,9 +43,7 @@ const Task = ({ id, name, isComplete, icon, onComplete, onUndo, onRemove }) => {
               backgroundColor: icon === "RUN" ? "#4CAF50" : "#2196F3",
               borderColor: "transparent"
             }}
-            icon={
-              <FontAwesomeIcon icon={icon === "RUN" ? faRunning : faBook} />
-            }
+            icon={<FontAwesomeIcon icon={icon === "RUN" ? faBook : faBook} />}
           />
         </div>
         <div className="rainbow-p-left_medium">
